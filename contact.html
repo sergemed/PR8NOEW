@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Éclat</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-symbol">✦</span> BERKUTYN <span class="logo-symbol">✦</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="contact.html" class="active">Контакты</a></li>
+            </ul>
+            <div class="nav-phone">+7 (495) 000-00-00</div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <div class="section-label">Свяжитесь с нами</div>
+                <h1 class="page-title">Откройте дверь<br>в мир роскоши</h1>
+                <div class="title-divider"></div>
+            </div>
+        </div>
+
+        <div class="contact-grid container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>◈ Адрес</h3>
+                    <p>Москва, ул. Пречистенка, 40/2<br>БЦ «Пречистенский»</p>
+                </div>
+                <div class="info-card">
+                    <h3>◈ Связь</h3>
+                    <p>Телефон: <a href="tel:+74950000000">+7 (495) 000-00-00</a><br>
+                        Email: <a href="mailto:hello@eclat.ru">hello@eclat.ru</a><br>
+                        Telegram: <span>@eclat_concierge</span></p>
+                </div>
+                <div class="info-card">
+                    <h3>◈ Режим работы</h3>
+                    <p>Для клиентов — 24/7<br>Офис: пн-пт 10:00–19:00</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form id="luxuryForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name">Ваше имя</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder=" ">
+                        <label for="phone">Телефон (необязательно)</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="4" placeholder=" " required></textarea>
+                        <label for="message">Сообщение</label>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Отправить запрос</button>
+                    <p class="form-note">Наш менеджер свяжется с вами в течение 2 часов</p>
+                </form>
+                <div id="formStatus" class="form-status"></div>
+            </div>
+        </div>
+
+        <div class="map-placeholder">
+            <div class="container">
+                <div class="map-card">
+                    <div class="map-icon">🗺</div>
+                    <p>Пречистенка, 40/2 — сердце старой Москвы</p>
+                    <div class="map-decor"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">ÉCLAT</div>
+                <p class="footer-tagline">Премиальный консьерж-сервис</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <p>hello@eclat.ru</p>
+                <p>+7 (495) 000-00-00</p>
+            </div>
+            <div class="footer-col">
+                <h4>Соцсети</h4>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Telegram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Éclat — там, где начинается роскошь.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('luxuryForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const statusDiv = document.getElementById('formStatus');
+            statusDiv.textContent = '✦ Заявка принята. Наш консьерж свяжется с вами в ближайшее время. ✦';
+            statusDiv.style.color = '#c6a43f';
+            statusDiv.style.marginTop = '20px';
+            this.reset();
+            setTimeout(() => { statusDiv.textContent = ''; }, 5000);
+        });
+    </script>
+</body>
+
+</html>
